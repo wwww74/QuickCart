@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Konditer.Views.ProductPage"
+             BackgroundColor="#fffafa">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ScrollView Grid.Row="0" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Frame Grid.Row="0" HasShadow="False" HorizontalOptions="FillAndExpand"  VerticalOptions="StartAndExpand">
+                    <Image x:Name="item_image" Source="milk.png" WidthRequest="300" HeightRequest="300"/>
+                </Frame>
+                <Frame Grid.Row="1" HasShadow="False" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" Padding="0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Label x:Name="item_name" Grid.Row="0" Text="Молоко 3,2% «Янта»" TextColor="#252525" FontSize="30" Margin="20, 0, 0, 0"/>
+                        <Label x:Name="item_price" Grid.Row="1" Text="101 ₽" TextColor="#252525" FontSize="30" FontFamily="EvolveBold" Margin="20, 0, 0, 0"/>
+                        <Label Grid.Row="1" Text="* на 100 г." TextColor="#252525" FontSize="15" Margin="20, 20, 20, 0" HorizontalOptions="EndAndExpand"/>
+                        <Frame Grid.Row="2" HasShadow="False" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" Padding="0, 0, 0, 15">
+                            <ScrollView Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                <Grid ColumnSpacing="15">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Frame Grid.Column="0" HasShadow="True" BackgroundColor="White" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" CornerRadius="10" Padding="10, 5, 10, 5" Margin="5, 0, 0, 0">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Label x:Name="ccalL" Grid.Row="0" Text="183" TextColor="#252525" FontSize="20" FontFamily="EvolveBold" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                                            <Label Grid.Row="1" Text="ккал" TextColor="#a0a0a0" FontSize="20" FontFamily="EvolveBold" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" Margin="0, -10, 0, 0"/>
+                                        </Grid>
+                                    </Frame>
+                                    <Frame Grid.Column="1" HasShadow="True" BackgroundColor="White" CornerRadius="10" VerticalOptions="CenterAndExpand" Padding="10, 5, 10, 5">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Label x:Name="belokL" Grid.Row="0" Text="183" TextColor="#252525" FontSize="20" FontFamily="EvolveBold" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                                            <Label Grid.Row="1" Text="белок" TextColor="#a0a0a0" FontSize="20" FontFamily="EvolveBold" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" Margin="0, -10, 0, 0"/>
+                                        </Grid>
+                                    </Frame>
+                                    <Frame Grid.Column="2" HasShadow="True" BackgroundColor="White" CornerRadius="10" VerticalOptions="CenterAndExpand" Padding="10, 5, 10, 5">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Label x:Name="uglevodL" Grid.Row="0" Text="183" TextColor="#252525" FontSize="20" FontFamily="EvolveBold" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                                            <Label Grid.Row="1" Text="углеводы" TextColor="#a0a0a0" FontSize="20" FontFamily="EvolveBold" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" Margin="0, -10, 0, 0"/>
+                                        </Grid>
+                                    </Frame>
+                                    <Frame Grid.Column="3" HasShadow="True" BackgroundColor="White" CornerRadius="10" VerticalOptions="CenterAndExpand" Padding="10, 5, 10, 5" Margin="0, 10, 0, 10">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Label x:Name="jirL" Grid.Row="0" Text="183" TextColor="#252525" FontSize="20" FontFamily="EvolveBold" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                                            <Label Grid.Row="1" Text="жиры" TextColor="#a0a0a0" FontSize="20" FontFamily="EvolveBold" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" Margin="0, -10, 0, 0"/>
+                                        </Grid>
+                                    </Frame>
+                                </Grid>
+                            </ScrollView>
+                        </Frame>
+                        <Label Grid.Row="3" Text="О товаре" TextColor="#f97bcf" FontSize="30" HorizontalOptions="CenterAndExpand" Margin="0, 20, 0, 0"/>
+                        <Line Grid.Row="3" X1="0" X2="400" Stroke="#f97bcf" Margin="20, 70, 20, 0"/>
+                        <Label Grid.Row="4" Text="Состав:" TextColor="#252525" FontSize="20" HorizontalOptions="StartAndExpand" Margin="20, 20, 0, 0"/>
+                        <Label x:Name="sostavL" Grid.Row="5" Text="Молоко цельное, молоко обезжиренное." TextColor="#252525" FontSize="20" FontFamily="EvolveBold" HorizontalOptions="StartAndExpand" Margin="20, 0, 0, 0"/>
+                        <Label Grid.Row="6" Text="Срок годности, условия хранения:" TextColor="#252525" FontSize="20" HorizontalOptions="StartAndExpand" Margin="20, 20, 0, 0"/>
+                        <Label x:Name="srokL" Grid.Row="7" Text="6 д., от 2C˚ до 4C˚" TextColor="#252525" FontSize="20" FontFamily="EvolveBold" HorizontalOptions="StartAndExpand" Margin="20, 0, 0, 0"/>
+                        <Label Grid.Row="8" Text="Производитель, страна:" TextColor="#252525" FontSize="20" HorizontalOptions="StartAndExpand" Margin="20, 20, 0, 0"/>
+                        <Label x:Name="proizvodL" Grid.Row="9" Text="ООО «Иркутский Масложиркомбинат», Россия" TextColor="#252525" FontSize="20" FontFamily="EvolveBold" HorizontalOptions="StartAndExpand" Margin="20, 0, 0, 0"/>
+                        <Frame Grid.Row="10" HasShadow="False" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" HeightRequest="50"/>
+                    </Grid>
+                </Frame>
+            </Grid>
+        </ScrollView>
+        <Frame Grid.Row="0" HasShadow="False" BackgroundColor="#FFFAFA" HorizontalOptions="Fill" VerticalOptions="End" BorderColor="#f97bcf" Margin="-2, 0, -2, -1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0" Margin="0, 0, 26, 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Text="Общая сумма" TextColor="#252525" FontSize="15" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                    <Label x:Name="summaL" Grid.Row="1" Text="" TextColor="#f97bcf" FontSize="15" FontFamily="EvolveBold" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                </Grid>
+                <Frame Grid.Column="1" HasShadow="False" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" CornerRadius="20" Padding="0" WidthRequest="130" HeightRequest="40" Margin="-50, 0, -30, 0" BorderColor="#252525">
+                    <Grid Padding="0, 5, 0, 0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Row="0" Grid.Column="0" BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Text="-" TextColor="#252525" FontFamily="EvolveBold" FontSize="25" WidthRequest="40" HeightRequest="40" Margin="0, -12, 0, 0" Clicked="Button_Clicked_1"/>
+                        <Label x:Name="countL" Grid.Row="0" Grid.Column="1" Text="0" TextColor="#252525" FontFamily="EvolveBold" FontSize="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, 0, 0, 0"/>
+                        <Button Grid.Row="0" Grid.Column="2" BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Text="+" TextColor="#252525" FontFamily="EvolveBold" FontSize="25" WidthRequest="40" HeightRequest="40" Margin="0, -12, 0, 0" Clicked="Button_Clicked_2"/>
+                    </Grid>
+                </Frame>
+                <Button Grid.Column="2" Text="В корзину" CornerRadius="15" Clicked="Button_Clicked">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="#f97bcf" Offset="0.1"/>
+                            <GradientStop Color="#ff44bd" Offset="1.0"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+            </Grid>
+        </Frame>
+    </Grid>
+</ContentPage>

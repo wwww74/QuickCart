@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Konditer.Views.Profile"
+             BackgroundColor="#FFFAFA"
+             Shell.NavBarHasShadow="False">
+    
+    <Shell.TitleView>
+        <Grid x:Name="sTitleView">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <ImageButton x:Name="close_acc" Grid.Row="0" Grid.Column="4" Source="exit_acc.png" BackgroundColor="#FFFAFA" Scale="0.8" Margin="20, 12, 0, 0" Clicked="ImageButton_Clicked"/>
+        </Grid>
+    </Shell.TitleView>
+
+    <Grid x:Name="ScrollV">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="1" Margin="0, -6, 0, 0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Frame x:Name="ProfileHeader" Grid.Row="0" HeightRequest="70" HasShadow="False" VerticalOptions="StartAndExpand" BackgroundColor="#FFFAFA"/>
+                <Frame x:Name="ProfileBody" HasShadow="False" Grid.Row="1" Margin="0, -12, 0, 0" BackgroundColor="#FFFAFA" HeightRequest="590">
+                    <Grid x:Name="Personal_Body_Grid">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Frame x:Name="Frame_name" IsVisible="false" Grid.Row="1" BackgroundColor="White" HasShadow="False">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Text="Имя: " TextColor="#252525" FontSize="17" Margin="-20, 0, 0, 0"/>
+                                <Entry x:Name="Entry_name" Text="Максим" HeightRequest="40" Margin="25, -13, 0, 0" TextColor="#252525" Placeholder="Введите имя" PlaceholderColor="#252525" FontSize="17" FontFamily="EvolveLight"/>
+                            </Grid>
+                        </Frame>
+                        <Frame x:Name="Frame_mail" IsVisible="false" Grid.Row="2" BackgroundColor="White" HasShadow="False" Margin="0, -35, 0, 0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Text="Почта: " TextColor="#252525" FontSize="17" Margin="-20, 0, 0, 0"/>
+                                <Entry x:Name="Entry_mail" Text="m_m4vr1n@mail.ru" HeightRequest="40" Margin="40, -13, 0, 0" TextColor="#252525" Placeholder="Введите почту" PlaceholderColor="#252525" FontSize="17" FontFamily="EvolveLight"/>
+                            </Grid>
+                        </Frame>
+                        <Frame x:Name="Frame_number" IsVisible="false"  Grid.Row="3" BackgroundColor="White" HasShadow="False" Margin="0, -35, 0, 0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Text="Телефон: " TextColor="#252525" FontSize="17" Margin="-20, 0, 0, 0"/>
+                                <Entry x:Name="Entry_number" Text="+79016500814" HeightRequest="40" Margin="55, -13, 0, 0" TextColor="#252525" Placeholder="Введите номер телефона" PlaceholderColor="#252525" FontSize="17" FontFamily="EvolveLight"/>
+                            </Grid>
+                        </Frame>
+                        <Button x:Name="exit_btn" IsVisible="false" Grid.Row="4" Text="Отменить" CornerRadius="10" TextColor="White" BorderWidth="1" BorderColor="White" HorizontalOptions="StartAndExpand" Padding="20, 0, 20, 0" Margin="20, 0, 0, 0" Clicked="exit_btn_Clicked">
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="1,0">
+                                    <GradientStop Color="#f97bcf" Offset="0.1"/>
+                                    <GradientStop Color="#ff44bd" Offset="1.0"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                        <Button x:Name="save_btn" IsVisible="false" Grid.Row="4" Text="Сохранить" CornerRadius="10" TextColor="White" BorderWidth="1" BorderColor="White" HorizontalOptions="EndAndExpand" Padding="20, 0, 20, 0" Margin="0, 0, 40, 0" Clicked="save_btn_Clicked">
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="1,0">
+                                    <GradientStop Color="#f97bcf" Offset="0.1"/>
+                                    <GradientStop Color="#ff44bd" Offset="1.0"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                    </Grid>
+                </Frame>
+                <Ellipse Grid.Row="1" Fill="#f0f0f0" WidthRequest="120" HeightRequest="120" Margin="0, -65, 0, 0" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                <Ellipse Grid.Row="1" Fill="#e0e0e0" WidthRequest="110" HeightRequest="110" Margin="0, -60, 0, 0" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+            </Grid>
+        </StackLayout>
+        <Frame Grid.Row="0" HasShadow="True" HorizontalOptions="Fill" VerticalOptions="Start" BackgroundColor="#FFFAFA" CornerRadius="0">
+            <Grid>
+                <Label x:Name="startL" Text="Профиль" TextColor="#252525" FontFamily="EvolveBold" FontSize="34" Margin="0, -10, 0, 0"/>
+                <ImageButton Source="edit.png" BackgroundColor="#FFFAFA" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="25" HeightRequest="25" Margin="0, 0, 2, 0" Clicked="Img_btn_Clicked"/>
+            </Grid>
+        </Frame>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Konditer.Views.HistoryPage"
+             BackgroundColor="#FFFAFA"
+             Shell.NavBarHasShadow="False">
+
+    <Shell.TitleView>
+        <Grid x:Name="sTitleView">
+            <Label Grid.Row="0" Text="QuickCart" TextColor="#252525" FontSize="25" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, 0, 60, 0"/>
+        </Grid>
+    </Shell.TitleView>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame Grid.Row="0" HasShadow="True" BackgroundColor="#FFFAFA" HorizontalOptions="Fill" VerticalOptions="Start">
+            <Label Text="История заказов" TextColor="#252525" FontFamily="EvolveBold" FontSize="30" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+        </Frame>
+        <ScrollView Grid.Row="1" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" Margin="0, -5, 0, 0">
+            <Grid x:Name="order_grid">
+                <!--<Frame Grid.Row="1" HasShadow="True" BackgroundColor="#FFFAFA" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" CornerRadius="15" BorderColor="#c0c0c0" Margin="10, 10, 10, 0" Padding="0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Text="Заказ #4" TextColor="#252525" FontFamily="EvolveBold" FontSize="30" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Margin="20, 10, 0, 0"/>
+                        <Label Grid.Row="0" Text="25 мая в 13:34" TextColor="#252525" FontFamily="EvolveBold" FontSize="20" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Margin="0, 10, 20, 0"/>
+                        <Label Grid.Row="1" Text="790 p." TextColor="#a0a0a0" FontFamily="EvolveBold" FontSize="20" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Margin="20, 0, 0, 10"/>
+                    </Grid>
+                </Frame>-->
+            </Grid>
+        </ScrollView>
+    </Grid>
+</ContentPage>

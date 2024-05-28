@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Konditer.Views.Start_Auth"
+             BackgroundColor="#FFFAFA"
+>
+
+    <Grid>
+        <BoxView>
+            <BoxView.Background>
+                <LinearGradientBrush EndPoint="1, 1">
+                    <GradientStop Color="#f97bcf" Offset="0"/>
+                    <GradientStop Color="#FFFAFA" Offset="0.5"/>
+                    <GradientStop Color="#f97bcf" Offset="1"/>
+                </LinearGradientBrush>
+            </BoxView.Background>
+        </BoxView>
+        <Frame HasShadow="True" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" CornerRadius="25" HeightRequest="600" WidthRequest="320">
+            <Grid>
+                <Label Text="QuickCart" FontSize="50" FontFamily="EvolveBold" TextColor="#ff44bd" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Margin="0, 50, 0, 0"/>
+                <Frame x:Name="loginF" HasShadow="True" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="20" BackgroundColor="#FFFAFA" CornerRadius="15">
+                    <Entry x:Name="loginE" Placeholder="Логин" PlaceholderColor="#252525" WidthRequest="250" TextColor="#252525" Margin="0, -20, 0, -20" FontFamily="EvolveLight"/>
+                </Frame>
+                <Frame x:Name="passwordF" HasShadow="True" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="20" CornerRadius="15" BackgroundColor="#FFFAFA" Margin="0, 150, 0, 0">
+                    <Entry x:Name="passwordE" Placeholder="Пароль" IsPassword="True" PlaceholderColor="#252525" WidthRequest="250" TextColor="#252525" Margin="0, -20, 0, -20" FontFamily="EvolveLight"/>
+                </Frame>
+                <Button Text="Войти" HeightRequest="50" WidthRequest="250" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" Margin="0, 0, 0, 90" CornerRadius="5" Clicked="Button_Clicked">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="#f97bcf" Offset="0.1"/>
+                            <GradientStop Color="#ff44bd" Offset="1.0"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button Text="Зарегистрироваться" TextColor="#252525" HeightRequest="50" WidthRequest="250" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" Margin="0, 0, 0, 20" CornerRadius="5" Clicked="Button_Clicked_1">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="white" Offset="0.1"/>
+                            <GradientStop Color="white" Offset="1.0"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+            </Grid>
+        </Frame>
+    </Grid>
+</ContentPage>

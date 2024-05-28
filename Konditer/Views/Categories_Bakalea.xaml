@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Konditer.Views.Categories_Bakalea"
+             BackgroundColor="#FFFAFA"
+             Shell.NavBarHasShadow="False">
+
+    <Shell.TitleView>
+        <Grid x:Name="sTitleView">
+            <Label Grid.Row="0" Text="QuickCart" TextColor="#252525" FontSize="25" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, 0, 60, 0"/>
+        </Grid>
+    </Shell.TitleView>
+
+    <ScrollView HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" Orientation="Vertical">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Frame Grid.Row="0" HasShadow="True" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#FFFAFA">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Text="Отдел бакалеи" TextColor="#252525" FontSize="27" FontFamily="EvolveBold" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                </Grid>
+            </Frame>
+            <Grid x:Name="milkGrid" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Text="Макароны" TextColor="#252525" FontFamily="EvolveBold" FontSize="30" Margin="25, 0, 0, 0"/>
+                <Frame x:Name="milkF" Grid.Row="0" Grid.Column="0" HasShadow="True" CornerRadius="10" VerticalOptions="CenterAndExpand" HeightRequest="205" Margin="25, 50, 20, 10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0" Source="makaroni.png" WidthRequest="120" HeightRequest="120" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Frame Grid.Row="1" HasShadow="False" BackgroundColor="#f97bcf" CornerRadius="5" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="5, 0, 5, 0" Margin="0, -60, 70, 0">
+                            <Grid>
+                                <Label x:Name="sale_label" Text="-25%" FontSize="15" TextColor="White"/>
+                            </Grid>
+                        </Frame>
+                        <Label Grid.Row="1" Text="Макароны Spaghetti Barilla" FontSize="15" TextColor="#252525" WidthRequest="10" HeightRequest="35"/>
+                        <Frame Grid.Row="2" HasShadow="False" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Frame x:Name="milkB" Grid.Column="0" HasShadow="False" BackgroundColor="#f97bcf" WidthRequest="20" HeightRequest="20" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="5, 5, 5, 5">
+                                    <Label Text="+" FontSize="30" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, -10, 0, 0"/>
+                                </Frame>
+                                <Frame Grid.Column="1" HasShadow="False" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                                    <Grid RowSpacing="0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Row="0" Text="112 р." FontSize="15" TextColor="#252525" TextDecorations="Strikethrough"/>
+                                        <Label Grid.Row="1" Text="84 р." FontSize="15" TextColor="#f97bcf"/>
+                                    </Grid>
+                                </Frame>
+                            </Grid>
+                        </Frame>
+                    </Grid>
+                </Frame>
+                <Frame x:Name="tomatoF" Grid.Row="0" Grid.Column="1" HasShadow="True" CornerRadius="10" VerticalOptions="CenterAndExpand" HeightRequest="205" Margin="0, 50, 0, 10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0" Source="makaroni2.png" WidthRequest="120" HeightRequest="120" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Label Grid.Row="1" Text="Makfa паутинка" FontSize="15" TextColor="#252525" WidthRequest="10" HeightRequest="35"/>
+                        <Frame Grid.Row="2" HasShadow="False" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                            <Grid Margin="0, 3, 0, 0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Frame x:Name="tomatoB" Grid.Column="0" HasShadow="False" BackgroundColor="#f97bcf" WidthRequest="20" HeightRequest="20" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="5, 5, 5, 5">
+                                    <Label Text="+" FontSize="30" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, -10, 0, 0"/>
+                                </Frame>
+                                <Frame Grid.Column="1" HasShadow="False" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                                    <Grid RowSpacing="0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Row="0" Text="81 p." FontSize="15" TextColor="#252525" TextDecorations="None" Margin="0, 0, 0, -50"/>
+                                        <Label Grid.Row="1" Text="" FontSize="15" TextColor="#f97bcf"/>
+                                    </Grid>
+                                </Frame>
+                            </Grid>
+                        </Frame>
+                    </Grid>
+                </Frame>
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>

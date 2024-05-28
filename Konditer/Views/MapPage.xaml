@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Konditer.Views.MapPage"
+             BackgroundColor="#FFFAFA"
+             Shell.NavBarHasShadow="False">
+
+    <Shell.TitleView>
+        <Grid x:Name="sTitleView">
+            <Label Grid.Row="0" Text="QuickCart" TextColor="#252525" FontSize="25" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, 0, 60, 0"/>
+        </Grid>
+    </Shell.TitleView>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="mapGrid" Grid.Row="1" Margin="0, -5, 0, 0">
+
+        </Grid>
+
+        <Frame Grid.Row="0" HasShadow="True" HorizontalOptions="Fill" VerticalOptions="Start" BackgroundColor="#FFFAFA">
+            <Grid>
+                <Label x:Name="startL" Text="Карта" TextColor="#252525" FontFamily="EvolveBold" FontSize="34" Margin="0, -20, 0, 0"/>
+            </Grid>
+        </Frame>
+    </Grid>
+</ContentPage>

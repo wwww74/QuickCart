@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Konditer.Views.BasketPage"
+             Title=""
+             BackgroundColor="#FFFAFA"
+             Shell.NavBarHasShadow="False">
+
+    <Shell.TitleView>
+        <Grid x:Name="sTitleView">
+            <Label Grid.Row="0" Text="QuickCart" TextColor="#252525" FontSize="25" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, 0, 60, 0"/>
+            <Frame Grid.Row="0" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="Transparent">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Frame.GestureRecognizers>
+                <Label Text="Очистить" TextColor="#252525" FontSize="15" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"/>
+            </Frame>
+        </Grid>
+    </Shell.TitleView>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <ScrollView Grid.Row="0" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Frame Grid.Row="0" HasShadow="True" HeightRequest="55"/>
+                    <Grid x:Name="itemsGrid" Grid.Row="1">
+                        <!--<Frame Grid.Row="3" HasShadow="False" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Margin="-10, 10, -10, 0" BorderColor="#e0e0e0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" Source="milk.png" WidthRequest="110" HeightRequest="110"/>
+                                <Frame Grid.Column="1" HasShadow="False" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Padding="0" BackgroundColor="Transparent">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Row="0" Text="Молоко 3,2% «Янта»" TextColor="#252525" FontSize="20" WidthRequest="110"/>
+                                        <Frame Grid.Row="1" HasShadow="False" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" CornerRadius="20" Padding="0" WidthRequest="130" HeightRequest="40" Margin="-10, 20, -30, 0" BorderColor="#252525">
+                                            <Grid Padding="0, 5, 0, 0">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Button Grid.Row="0" Grid.Column="0" BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Text="-" TextColor="#252525" FontFamily="EvolveBold" FontSize="25" WidthRequest="40" HeightRequest="40" Margin="0, -12, 0, 0"/>
+                                                <Label x:Name="countL" Grid.Row="0" Grid.Column="1" Text="0" TextColor="#252525" FontFamily="EvolveBold" FontSize="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, 0, 0, 0"/>
+                                                <Button Grid.Row="0" Grid.Column="2" BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Text="+" TextColor="#252525" FontFamily="EvolveBold" FontSize="25" WidthRequest="40" HeightRequest="40" Margin="0, -12, 0, 0"/>
+                                            </Grid>
+                                        </Frame>
+                                    </Grid>
+                                </Frame>
+                                <Label Grid.Column="2" Text="300p." TextColor="#252525" FontFamily="EvolveBold" FontSize="23" HorizontalOptions="EndAndExpand" Margin="0, 0, 15, 0"/>
+                            </Grid>
+                        </Frame>-->
+                    </Grid>
+                </Grid>
+                <Frame Grid.Row="1" HasShadow="False" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="60"/>
+            </Grid>
+        </ScrollView>
+
+        <Frame Grid.Row="0" HasShadow="True" HorizontalOptions="Fill" VerticalOptions="Start" BackgroundColor="#FFFAFA">
+            <Grid>
+                <Label x:Name="startL" Text="В корзине ? продуктов на ? р" TextColor="#252525" FontFamily="EvolveBold" FontSize="34" Margin="0, -20, 0, 0"/>
+            </Grid>
+        </Frame>
+
+        <Frame x:Name="orderF" Grid.Row="0" HasShadow="False" BackgroundColor="#FFFAFA" HorizontalOptions="Fill" VerticalOptions="End" BorderColor="#f97bcf" Margin="-2, 0, -2, -1">
+            <Grid>
+                <Frame x:Name="order_btn" HasShadow="True" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="50" Padding="0" CornerRadius="10" Margin="0, 0, 0, 0">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                    </Frame.GestureRecognizers>
+                    <Grid>
+                        <BoxView>
+                            <BoxView.Background>
+                                <LinearGradientBrush EndPoint="1,0">
+                                    <GradientStop Color="#f97bcf" Offset="0.1"/>
+                                    <GradientStop Color="#ff44bd" Offset="1.0"/>
+                                </LinearGradientBrush>
+                            </BoxView.Background>
+                        </BoxView>
+                        <Label Text="Оформить заказ" TextColor="White" FontSize="20" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Margin="20, 0, 0, 0"/>
+                        <Label x:Name="lastPriceL" Text="" TextColor="White" FontSize="20" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Margin="0, 0, 20, 0"/>
+                    </Grid>
+                </Frame>
+            </Grid>
+        </Frame>
+    </Grid>
+</ContentPage>

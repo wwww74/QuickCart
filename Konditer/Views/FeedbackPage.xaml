@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Konditer.Views.FeedbackPage"
+             BackgroundColor="#FFFAFA"
+             Shell.NavBarHasShadow="False">
+
+    <Shell.TitleView>
+        <Grid x:Name="sTitleView">
+            <Label Grid.Row="0" Text="QuickCart" TextColor="#252525" FontSize="25" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, 0, 60, 0"/>
+        </Grid>
+    </Shell.TitleView>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Never">
+            <Grid RowSpacing="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Frame Grid.Row="0" HasShadow="False" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" HeightRequest="20" BackgroundColor="Transparent"/>
+                <Label Grid.Row="1" Text="Как мы работаем?" TextColor="#252525" FontSize="30" FontFamily="EvolveBold" HorizontalOptions="CenterAndExpand"/>
+                <Frame Grid.Row="2" HasShadow="True" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="#f0fadf" CornerRadius="15" Margin="20, 20, 20, 10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Text="Не обычный магазин, а склад в вашем районе" TextColor="#252525" FontSize="25" HorizontalOptions="StartAndExpand"/>
+                        <Label Grid.Row="1" Text="Мы ежедневно привозим туда качественные товары разных производителей, а кладовщики следят за сроками годности и правильным хранением" TextColor="#252525" FontSize="17" HorizontalOptions="StartAndExpand"/>
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="3" HasShadow="True" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="130" BackgroundColor="#ebfafd" CornerRadius="15" Margin="20, 0, 20, 10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Text="Вы выбираете товары" TextColor="#252525" FontSize="25" HorizontalOptions="StartAndExpand"/>
+                        <Label Grid.Row="1" Text="В ассортименте 2500 товаров из разных категорий" TextColor="#252525" FontSize="17" HorizontalOptions="StartAndExpand"/>
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="3" HasShadow="True" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="130" BackgroundColor="#fae6e5" CornerRadius="15" Margin="20, 0, 20, 10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Text="Кладовщик собирает заказ" TextColor="#252525" FontSize="25" HorizontalOptions="StartAndExpand"/>
+                        <Label Grid.Row="1" Text="На сборку требуется всего несколько минут" TextColor="#252525" FontSize="17" HorizontalOptions="StartAndExpand"/>
+                    </Grid>
+                </Frame>
+                <Label Grid.Row="4" Text="Спасибо, что выбираете нас &lt;3" TextColor="#252525" FontSize="28" FontFamily="EvolveBold" HorizontalOptions="CenterAndExpand" Margin="0, 20, 0, 0"/>
+            </Grid>
+        </ScrollView>
+
+        <Frame Grid.Row="0" HasShadow="True" HorizontalOptions="Fill" VerticalOptions="Start" BackgroundColor="#FFFAFA">
+            <Grid>
+                <Label x:Name="startL" Text="О нас" TextColor="#252525" FontFamily="EvolveBold" FontSize="34" Margin="0, -20, 0, 0"/>
+            </Grid>
+        </Frame>
+    </Grid>
+</ContentPage>

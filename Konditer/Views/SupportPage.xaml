@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Konditer.Views.SupportPage"
+             BackgroundColor="#FFFAFA"
+             Shell.NavBarHasShadow="False">
+    
+    <Shell.TitleView>
+        <Grid x:Name="sTitleView">
+            <Label Grid.Row="0" Text="QuickCart" TextColor="#252525" FontSize="25" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, 0, 60, 0"/>
+        </Grid>
+    </Shell.TitleView>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Never">
+            <Grid RowSpacing="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Frame Grid.Row="0" HasShadow="False" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" HeightRequest="20" BackgroundColor="Transparent"/>
+                <Frame Grid.Row="1" HasShadow="True" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="Transparent" BorderColor="#252525" CornerRadius="15" Margin="20, 20, 20, 10">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Open_MaxAcc}"/>
+                    </Frame.GestureRecognizers>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Text="Для связи с тех.поддержкой" TextColor="#252525" FontSize="23" HorizontalOptions="CenterAndExpand"/>
+                        <Label Grid.Row="1" Text="просто нажмите на меня" TextColor="#252525" FontSize="23" HorizontalOptions="CenterAndExpand"/>
+                    </Grid>
+                </Frame>
+            </Grid>
+        </ScrollView>
+
+        <Frame Grid.Row="0" HasShadow="True" HorizontalOptions="Fill" VerticalOptions="Start" BackgroundColor="#FFFAFA">
+            <Grid>
+                <Label x:Name="startL" Text="Тех.поддержка" TextColor="#252525" FontFamily="EvolveBold" FontSize="34" Margin="0, -20, 0, 0"/>
+            </Grid>
+        </Frame>
+    </Grid>
+</ContentPage>

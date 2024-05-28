@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Konditer.Views.Other_SaleItem"
+             BackgroundColor="#FFFAFA"
+             Shell.NavBarHasShadow="False">
+    
+    <Shell.TitleView>
+        <Grid x:Name="sTitleView">
+            <Label Grid.Row="0" Text="QuickCart" TextColor="#252525" FontSize="25" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, 0, 60, 0"/>
+        </Grid>
+    </Shell.TitleView>
+
+    <ScrollView HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" Orientation="Vertical">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Frame Grid.Row="0" HasShadow="True" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#FFFAFA">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Text="Товары со скидкой" TextColor="#252525" FontSize="27" FontFamily="EvolveBold" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                </Grid>
+            </Frame>
+            <Grid x:Name="saleGrid" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Frame x:Name="milkF" Grid.Row="0" Grid.Column="0" HasShadow="True" CornerRadius="10" VerticalOptions="CenterAndExpand" HeightRequest="205" Margin="25, 10, 20, 10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0" Source="milk.png" WidthRequest="120" HeightRequest="120" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Frame Grid.Row="1" HasShadow="False" BackgroundColor="#f97bcf" CornerRadius="5" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="5, 0, 5, 0" Margin="0, -60, 70, 0">
+                            <Grid>
+                                <Label x:Name="sale_label" Text="-5%" FontSize="15" TextColor="White"/>
+                            </Grid>
+                        </Frame>
+                        <Label Grid.Row="1" Text="Молоко 3,2% «Янта»" FontSize="15" TextColor="#252525" WidthRequest="10" HeightRequest="35"/>
+                        <Frame Grid.Row="2" HasShadow="False" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Frame x:Name="milkB" Grid.Column="0" HasShadow="False" BackgroundColor="#f97bcf" WidthRequest="20" HeightRequest="20" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="5, 5, 5, 5">
+                                    <Label Text="+" FontSize="30" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, -10, 0, 0"/>
+                                </Frame>
+                                <Frame Grid.Column="1" HasShadow="False" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                                    <Grid RowSpacing="0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Row="0" Text="101 р." FontSize="15" TextColor="#252525" TextDecorations="Strikethrough"/>
+                                        <Label Grid.Row="1" Text="96 р." FontSize="15" TextColor="#f97bcf"/>
+                                    </Grid>
+                                </Frame>
+                            </Grid>
+                        </Frame>
+                    </Grid>
+                </Frame>
+                <Frame x:Name="tomatoF" Grid.Row="0" Grid.Column="1" HasShadow="True" CornerRadius="10" VerticalOptions="CenterAndExpand" HeightRequest="205" Margin="0, 10, 0, 10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0" Source="tomato2.png" WidthRequest="120" HeightRequest="120" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Frame Grid.Row="1" HasShadow="False" BackgroundColor="#f97bcf" CornerRadius="5" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="5, 0, 5, 0" Margin="0, -60, 70, 0">
+                            <Grid>
+                                <Label Text="-10%" FontSize="15" TextColor="White"/>
+                            </Grid>
+                        </Frame>
+                        <Label Grid.Row="1" Text="Томаты черри" FontSize="15" TextColor="#252525" WidthRequest="10" HeightRequest="35"/>
+                        <Frame Grid.Row="2" HasShadow="False" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Frame x:Name="tomatoB" Grid.Column="0" HasShadow="False" BackgroundColor="#f97bcf" WidthRequest="20" HeightRequest="20" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="5, 5, 5, 5">
+                                    <Label Text="+" FontSize="30" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, -10, 0, 0"/>
+                                </Frame>
+                                <Frame Grid.Column="1" HasShadow="False" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                                    <Grid RowSpacing="0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Row="0" Text="185 p." FontSize="15" TextColor="#252525" TextDecorations="Strikethrough"/>
+                                        <Label Grid.Row="1" Text="167 p." FontSize="15" TextColor="#f97bcf"/>
+                                    </Grid>
+                                </Frame>
+                            </Grid>
+                        </Frame>
+                    </Grid>
+                </Frame>
+                <Frame x:Name="eggF" Grid.Row="1" Grid.Column="0" HasShadow="True" CornerRadius="10" VerticalOptions="CenterAndExpand" HeightRequest="205" Margin="25, 10, 20, 10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0" Source="egg.png" WidthRequest="120" HeightRequest="120" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Frame Grid.Row="1" HasShadow="False" BackgroundColor="#f97bcf" CornerRadius="5" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="5, 0, 5, 0" Margin="0, -60, 70, 0">
+                            <Grid>
+                                <Label Text="-15%" FontSize="15" TextColor="White"/>
+                            </Grid>
+                        </Frame>
+                        <Label Grid.Row="1" Text="Яйцо куриное СО" FontSize="15" TextColor="#252525" WidthRequest="10" HeightRequest="35"/>
+                        <Frame Grid.Row="2" HasShadow="False" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Frame x:Name="eggB" Grid.Column="0" HasShadow="False" BackgroundColor="#f97bcf" WidthRequest="20" HeightRequest="20" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="5, 5, 5, 5">
+                                    <Label Text="+" FontSize="30" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, -10, 0, 0"/>
+                                </Frame>
+                                <Frame Grid.Column="1" HasShadow="False" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                                    <Grid RowSpacing="0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Row="0" Text="165 p." FontSize="15" TextColor="#252525" TextDecorations="Strikethrough"/>
+                                        <Label Grid.Row="1" Text="141 p." FontSize="15" TextColor="#f97bcf"/>
+                                    </Grid>
+                                </Frame>
+                            </Grid>
+                        </Frame>
+                    </Grid>
+                </Frame>
+                <Frame x:Name="chikenF" Grid.Row="1" Grid.Column="1" HasShadow="True" CornerRadius="10" VerticalOptions="CenterAndExpand" HeightRequest="205" Margin="0, 10, 0, 10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0" Source="chiken.png" WidthRequest="120" HeightRequest="120" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Frame Grid.Row="1" HasShadow="False" BackgroundColor="#f97bcf" CornerRadius="5" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="5, 0, 5, 0" Margin="0, -60, 70, 0">
+                            <Grid>
+                                <Label Text="-20%" FontSize="15" TextColor="White"/>
+                            </Grid>
+                        </Frame>
+                        <Label Grid.Row="1" Text="Филе цыплёнка" FontSize="15" TextColor="#252525" WidthRequest="10" HeightRequest="35"/>
+                        <Frame Grid.Row="2" HasShadow="False" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Frame x:Name="chikenB" Grid.Column="0" HasShadow="False" BackgroundColor="#f97bcf" WidthRequest="20" HeightRequest="20" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="5, 5, 5, 5">
+                                    <Label Text="+" FontSize="30" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, -10, 0, 0"/>
+                                </Frame>
+                                <Frame Grid.Column="1" HasShadow="False" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                                    <Grid RowSpacing="0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Row="0" Text="411 p." FontSize="15" TextColor="#252525" TextDecorations="Strikethrough"/>
+                                        <Label Grid.Row="1" Text="329 p." FontSize="15" TextColor="#f97bcf"/>
+                                    </Grid>
+                                </Frame>
+                            </Grid>
+                        </Frame>
+                    </Grid>
+                </Frame>
+                <Frame x:Name="makaroniF" Grid.Row="2" Grid.Column="0" HasShadow="True" CornerRadius="10" VerticalOptions="CenterAndExpand" HeightRequest="205" Margin="25, 10, 20, 10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0" Source="makaroni.png" WidthRequest="120" HeightRequest="120" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Frame Grid.Row="1" HasShadow="False" BackgroundColor="#f97bcf" CornerRadius="5" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="5, 0, 5, 0" Margin="0, -60, 70, 0">
+                            <Grid>
+                                <Label Text="-25%" FontSize="15" TextColor="White"/>
+                            </Grid>
+                        </Frame>
+                        <Label Grid.Row="1" Text="Макароны Spaghetti Barilla" FontSize="15" TextColor="#252525" WidthRequest="10" HeightRequest="35"/>
+                        <Frame Grid.Row="2" HasShadow="False" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Frame x:Name="makaroniB" Grid.Column="0" HasShadow="False" BackgroundColor="#f97bcf" WidthRequest="20" HeightRequest="20" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="5, 5, 5, 5">
+                                    <Label Text="+" FontSize="30" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, -10, 0, 0"/>
+                                </Frame>
+                                <Frame Grid.Column="1" HasShadow="False" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                                    <Grid RowSpacing="0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Row="0" Text="112 p." FontSize="15" TextColor="#252525" TextDecorations="Strikethrough"/>
+                                        <Label Grid.Row="1" Text="84 p." FontSize="15" TextColor="#f97bcf"/>
+                                    </Grid>
+                                </Frame>
+                            </Grid>
+                        </Frame>
+                    </Grid>
+                </Frame>
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>
